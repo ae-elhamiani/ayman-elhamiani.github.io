@@ -3,7 +3,7 @@ import { ethers } from "ethers"
 import SideBar from './components/side-bar'
 import { Row, Form, Button, Card, ListGroup } from 'react-bootstrap'
 import { create as ipfsHttpClient } from 'ipfs-http-client'
-import { CameraFill, Textarea, ShareFill} from 'react-bootstrap-icons';
+import { CameraFill, Textarea, ShareFill , PencilSquare ,CashCoin , Cash, Coin} from 'react-bootstrap-icons';
 import TextareaAutosize from 'react-textarea-autosize';
 import { Link } from 'react-router-dom'
 import Painterro from 'painterro'
@@ -141,6 +141,8 @@ const Home = ({ contract }) => {
         }
         await (await contract.uploadPost(hash, ihash)).wait()
         loadPosts()
+        window.location.reload();
+
     }
     const tip = async (post) => {
         await (await contract.tipPostOwner(post.id, { value: ethers.utils.parseEther("0.1") })).wait()
@@ -168,29 +170,37 @@ const Home = ({ contract }) => {
 
 
                                         {selectedFile && (
-                                            <img src={selectedFile} className="tweetImg"></img>
+                                            <img src={selectedFile} id="tweetImg"></img>
 
                                         )}
-                                        <div className="imgOrTweet">
-                                            <div className="imgDiv" > 
-                                            </div>
+                                    <div className="imgOrTweet">
+                                            
+                                                                    
+                                            <div></div>
                                                 <div className="tweetOptions">
-                                                    
-                                                            <div id='camfill' onClick={onImageClick}>
+                                                             <div id='camfill' onClick={onImageClick}    >
                                                                         <input type="file"  name="file"  ref={inputFile} onChange={changeHandler} style={{ display: "none"}}/>
-                                                                        <CameraFill fill="#fff" size={27} svg="image"  /> 
-
-                                                                   
+                                                                        <CameraFill  className='opt' size={27} svg="image"  /> 
                                                             </div>
-                                                            <Button onClick={onPainterroClick} id=""   >
-                                                                draw
-                                                            </Button>
-                                                            <Button onClick={uploadPost} id="tweet"   >
+                                                            
+                                                            <div id='penfill' onClick={onPainterroClick}  >
+                                                                        <PencilSquare  className='opt'  size={27} /> 
+                                                            </div>
+
+                                                            
+                                                
+                                                </div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+
+
+
+                                                <Button onClick={uploadPost} id="tweet"   >
                                                             <ShareFill  size={23} id='sharefill'/>
                                                                 Share
                                                             </Button>
-                                                    
-                                                </div>
+                                             
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +231,7 @@ const Home = ({ contract }) => {
                                             </div>
                                         </div>
                         </main> */}
-                                    <div style={{ borderTop: "1px solid rgb(63, 63, 63) ", marginLeft: 105, marginRight: 120 ,marginBottom: 2 , marginTop: 5,}}></div>
+                                    <div style={{ borderTop: "1px solid rgb(63, 63, 63) ", marginLeft: 105, marginRight: 120 ,marginBottom: 52 , marginTop: 5,}}></div>
                     </div>
                     )
                     :
@@ -253,6 +263,9 @@ const Home = ({ contract }) => {
                                                 </small>
                                             </div>
                                         </div>
+
+                                      
+
                                     </Card.Header>
                                    {post.content == 'undefined'?(
                                         <Card.Body className='cardbody'  >
@@ -270,17 +283,17 @@ const Home = ({ contract }) => {
                                            
                                             )}
 
-
-                                    <Card.Footer className="list-group-item" id='tips'>
-                                    {address === post.author.address || !hasProfile ?
-                                            null : <div className="d-inline float-end">
-                                                <Button onClick={() => tip(post)} id='tip-button'>
-                                                    Tip for 0.1 ETH
-                                                </Button>
-                                            </div>}
-                                        <div id='tip-amount'> Tip Amount: {ethers.utils.formatEther(post.tipAmount)} ETH </div>
-                                        
-                                    </Card.Footer>
+                                        <Card.Footer className="list-group-item" id='tips'>
+                                        {address === post.author.address || !hasProfile ?
+                                                null : <div className="d-inline float-end">
+                                                    <Button onClick={() => tip(post)} id='tip-button'>
+                                                        Tip <Coin/>
+                                                    </Button>
+                                                </div>}
+                                            <div id='tip-amount'>  {ethers.utils.formatEther(post.tipAmount)} ETH </div>
+                                            
+                                            
+                                        </Card.Footer>
 
                                 </Card>
                             </div>)

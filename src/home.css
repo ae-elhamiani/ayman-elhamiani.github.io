@@ -139,20 +139,6 @@
     
 } 
 
-/* amount of tips  */
-#tip-amount{
-    color: #5ec1da;
-    font-size: 15px;
-}
-
-#tips{
-    margin-left: 5px;
-    border: none;
-    color: #c4c6c9;
-    font-size: 14px;
-    background: #161B22;
-
-}
 /* addresse of user in the post */
 /* #address{
     text-decoration: none;
@@ -186,31 +172,51 @@
     
     
     .post-content{
-      font-family: serif;
-          color: #fff;
+        font-family: serif;
+        color: #fff;
         border-radius: 6px;
         background-color: #151A21;
         /* border: 1px solid rgb(0, 0, 0); */
         padding-top: 0;
-        padding-left: 14px;
+        padding-left: 19px;
         padding-bottom: 0;
         padding-right: 14px;
-        min-height: 70px;
+        min-height: 20px;
     
     }
 
     /* footer od post */
 
     #tip-button{
-        background-color: #618598;
+        background-color: #da05ab;
         text-decoration: none;
         font-family: 'Times New Roman', Times, serif;
         border:none;
         height: 25px;
         padding-top: 1%;
-        box-shadow: 1px 1px 5px 2px #0c3624;
+        /* box-shadow: 1px 1px 5px 2px #0c3624; */
         border-radius: 40px;
+        
+   }
+  
+    #coinfill{
+        color: #15F095;
     }
+
+    #tip-amount{
+        color: #ffffff;
+        font-size: 15px;
+        margin-left: 76%;
+    }
+
+    #tips{
+        margin-left: 5px;
+        border: none;
+        color: #c4c6c9;
+        font-size: 14px;
+        background: #161B22;
+    }
+
 
 
 
@@ -314,23 +320,34 @@
         cursor: pointer;
         */
         background-color: #7743d8;
-        margin-top: 5%;
+        margin-top: 2px;
         font-size: 19px; 
         margin-left: 9px;
         text-decoration: none;
         border:none;
         height: 32px;
-        padding-top: 1%;
         color:#ffffff ;
         box-shadow: 1px 1px 5px 2px #0c3624;
         border-radius: 40px;
         outline: none;
-        margin-right: -18%;
+        box-shadow: none;
+        padding-top: -9rem;
+        padding-bottom: 2rem;
+        margin-bottom: -14px;
     }
+
+.opt:hover{
+    color: rgb(255, 255, 255);
+    transition: 0.9;
+    box-shadow: #fff;
+
+}
     #sharefill{
         padding-bottom: 5px;
         padding-right: 6px;
+        padding-top: -6%;
     }
+    
     #camfill{
         /* border: 0.07em solid #ffffff;
         padding: 10px 20px;
@@ -344,14 +361,41 @@
         text-decoration: none;
         border:none;
         height: 25px;
-        padding-top: 1%;
+        padding-top: 7%;
         border-radius: 40px;
         cursor: pointer;
         margin-top: 5%;
+        color:#a8a8a8 ;
+
         
 
     }
-    
+
+    #penfill{
+        /* border: 0.07em solid #ffffff;
+        padding: 10px 20px;
+        border-radius: 100px;
+        font-weight: 300;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+        transition: 0.7s; */
+        text-decoration: none;
+        border:none;
+        height: 25px;
+        border-radius: 40px;
+        cursor: pointer;
+        margin-top: 5%;
+        padding-left: 8%;
+        padding-top: 7%;
+
+        color:#a8a8a8 ;
+
+        
+
+    }
+
     
     
     .tweetOptions {
@@ -360,16 +404,17 @@
         gap: 10px;
     }
     
-    .imgDiv{
+    #imgDiv{
         border-radius: 50%;
         padding: 10px;
     }
     
-    .imgDiv:hover{
+    #imgDiv:hover{
         cursor:pointer;
         background-color: #282828;
     }
-    .tweetImg {
+
+    #tweetImg {
         width: 48%;
         border-radius: 30px;
         margin-left: 30%;
@@ -385,7 +430,6 @@
         border-radius: 30px;
         margin-left: 10%;
         margin-bottom: 1%;
-        margin-top: 1%;
     }
 
     #create-button{
