@@ -24,6 +24,10 @@ const Home = ({ contract }) => {
     const inputFile = useRef(null);
     const [selectedFile, setSelectedFile] = useState();
     const [img, setImage] = useState('')
+    const [count, setCount] = useState(0);
+    const current = new Date();
+    const date = `${current.getHours()}/${current.getMinutes()+1}/${current.getSeconds()}`;
+
 
    
   
@@ -156,8 +160,8 @@ const Home = ({ contract }) => {
         </div>
     )
     return (
-        <div className="container-fluid mt-5">
-            <div style={{ display:'inline-block', width:'66%'}}>
+        <div className="container-fluid mt-3">
+            <div style={{ display:'inline-block', width:'60%'}}>
                 {hasProfile ?
                     (
                         <div className="mainContent">
@@ -237,10 +241,12 @@ const Home = ({ contract }) => {
                     :
                     (<div className="text-center">
                         <main style={{ padding: "1rem 0" }}>
-                            <h2 style={{color: `grey`}}  >Must own an NFT to post</h2>
-                                <Button id='create-button' to='/profile' >
+                            <h2 style={{color: `#222B34`, marginBottom: `25`}}  >Must own an NFT to post</h2>
+                                {/* <Button id='create-button' to='/profile' >
                                 <a href='/profile'>Create</a>
-                                </Button>
+                                </Button> */}
+                                <Link as={Link} to="/profile" id="Create">Create </Link>
+
                         </main>
                     </div>)
                 }
@@ -253,6 +259,7 @@ const Home = ({ contract }) => {
                                         <div className='post-profile-box'>
                                             <div className='image-name' >
                                                 <img className='tweet-profile-image'  src={post.author.avatar} />
+
                                                 <small id='tweet-profile-user'>
                                                     {post.author.username}
                                                 </small>
@@ -263,9 +270,7 @@ const Home = ({ contract }) => {
                                                 </small>
                                             </div>
                                         </div>
-
-                                      
-
+                                        
                                     </Card.Header>
                                    {post.content == 'undefined'?(
                                         <Card.Body className='cardbody'  >
@@ -284,13 +289,14 @@ const Home = ({ contract }) => {
                                             )}
 
                                         <Card.Footer className="list-group-item" id='tips'>
+                                        <div id='tip-amount'>  {ethers.utils.formatEther(post.tipAmount)} ETH </div>
+
                                         {address === post.author.address || !hasProfile ?
-                                                null : <div className="d-inline float-end">
-                                                    <Button onClick={() => tip(post)} id='tip-button'>
-                                                        Tip <Coin/>
-                                                    </Button>
+                                                null : <div className="d-inline float-left">
+                                                    <div onClick={() => tip(post)} id='tip-button'>
+                                                       Tip 
+                                                    </div>
                                                 </div>}
-                                            <div id='tip-amount'>  {ethers.utils.formatEther(post.tipAmount)} ETH </div>
                                             
                                             
                                         </Card.Footer>
@@ -300,14 +306,15 @@ const Home = ({ contract }) => {
                     })
                     : (
                         <div className="text-center">
-                            <main style={{ padding: "1rem 0" }}>
-                                <h2 style={{color: `white`}} >No posts yet</h2>
+                            <main style={{ padding: "15rem 0" }}>
+                                <h1 style={{color: `white`}} >No posts yet</h1>
                             </main>
                         </div>
                     )}
             </div>
             
             <SideBar></SideBar>
+
             
 
         </div >
