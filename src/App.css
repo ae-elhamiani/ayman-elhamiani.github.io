@@ -16,6 +16,12 @@ body{
 
 #macpost{
   color: #fff;
+  font-size: 27px;
+}
+
+#div-logo{
+  margin-left: 20px;
+
 }
 
 #post-button,
