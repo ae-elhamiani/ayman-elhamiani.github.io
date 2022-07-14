@@ -88,9 +88,9 @@
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
          border-radius: 10px;
-  -webkit-box-shadow: 0 0 10px black;
+  /* -webkit-box-shadow: 0 0 10px black;
     -moz-box-shadow: 0 0 10px black;
-         box-shadow: 0 0 10px black;
+         box-shadow: 0 0 10px black; */
   background: #161B22;    
   margin-top: 2px;
   
@@ -132,10 +132,9 @@
 
 #tweet-profile-user{
     color: #fff;
-    font-family: serif;
-    font-size: 24px;
+    font-size: 20px;
     margin-top: -4%;
-    font-weight: 700;
+    font-weight: 600;
     
 } 
 
@@ -166,16 +165,14 @@
  
     #post-content{
         font-size: 20px;
-        font-family: fangsong;
         font-weight: 300;
     }
     
     
     .post-content{
-        font-family: serif;
         color: #fff;
         border-radius: 6px;
-        background-color: #151A21;
+        /* background-color: #151A21; */
         /* border: 1px solid rgb(0, 0, 0); */
         padding-top: 0;
         padding-left: 19px;
@@ -188,25 +185,37 @@
     /* footer od post */
 
     #tip-button{
-        background-color: #da05ab;
+        background-color: #7743d8;
         text-decoration: none;
-        font-family: 'Times New Roman', Times, serif;
         border:none;
-        height: 25px;
-        padding-top: 1%;
+        height: 27px;
         /* box-shadow: 1px 1px 5px 2px #0c3624; */
         border-radius: 40px;
-        
+        margin-left:74%;
+        margin-top: -29px;
+        padding-bottom: 1.8rem;
+        font-size: large;
+        width: 60px;
+        color: #fff;
+        padding-left: 18px;
+        cursor: pointer;
+            
    }
+   
+   
   
-    #coinfill{
-        color: #15F095;
-    }
-
+   
     #tip-amount{
-        color: #ffffff;
+        color: #f8f8f8;
         font-size: 15px;
-        margin-left: 76%;
+        margin-left: 86%;
+        border-radius: 3px;
+        background-color: #0F1117;
+        padding-left: 13px;
+        font-size: 16px;
+        font-family: 500;
+        height: 27px;
+
     }
 
     #tips{
@@ -260,7 +269,7 @@
     
     .exampleTextarea{
         background-color: #151A21;
-        width: 90%;
+        width: 92%;
         color: #fff;
         border-radius: 6px;
         margin-left: 10%;
@@ -270,6 +279,7 @@
         outline: none;
         border: none;
         resize: none;
+        margin-bottom: 3%;
         border-bottom: 1px solid rgb(61, 58, 58);
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
@@ -333,7 +343,7 @@
         box-shadow: none;
         padding-top: -9rem;
         padding-bottom: 2rem;
-        margin-bottom: -14px;
+        margin-bottom: -5px;
     }
 
 .opt:hover{
@@ -365,7 +375,7 @@
         border-radius: 40px;
         cursor: pointer;
         margin-top: 5%;
-        color:#a8a8a8 ;
+        color:#6b7885 ;
 
         
 
@@ -390,7 +400,7 @@
         padding-left: 8%;
         padding-top: 7%;
 
-        color:#a8a8a8 ;
+        color:#6b7885 ;
 
         
 
@@ -433,7 +443,7 @@
     }
 
     #create-button{
-        background-color: blueviolet;
+        background-color: blueviolet -50%;
         color: #fff;
         border-radius: 50px;
         width: 100px;
@@ -448,3 +458,14 @@
             border-radius: 50px;
         width: 100px;
     }
+#Create {
+        background-color: #7743d8;
+        color: #fff;
+        text-decoration: none;
+        width: 80%;
+        height: 1.2rem;
+        font-size: 19px;
+        padding: 7px 20px ;
+        border-radius: 50px;
+}
+
