@@ -104,7 +104,6 @@ const App = ({ contract }) => {
                         {/* <img className="mb-3" id='main-profile-image'  style={{ width: '300px',  height:'300px'}} src={profile.avatar} />
                         <h3 className="mb-3" className="username">{profile.username}</h3>
                         <h6 className="mb-3" className="userbio"> yow this is me the owner of this proffile  </h6> */}
-
                                 <div class="wrapper">
                                     <div class="profile-card js-profile-card">
                                     <div class="profile-card__img">
@@ -115,7 +114,7 @@ const App = ({ contract }) => {
                                     <div class="profile-card__cnt js-profile-cnt">
                                             <div class="data-container">
                                                         <h1>{profile.username}</h1>
-                                                        <h4>0x2546BcD3c84621e976D8185a91A922aE77ECEc30</h4>
+                                                        <h4>0x6b3e123b689C80EC7Ed7031152b8491E8f336EE5</h4>
                                             </div>
                                             <div style={{ borderTop: "3px solid #15F095 ", marginLeft: 20, marginRight: 20 ,marginBottom: 2 , marginTop: 5,}}></div>
                                             <div style={{ borderTop: "3px solid #000 ", marginLeft: 20, marginRight: 20 ,marginBottom: 0 , marginTop: 0,}}></div>
@@ -134,10 +133,12 @@ const App = ({ contract }) => {
                         <div class="formm" >
                              <div class="state"></div>
                                 <div class="file-inputt">
+                                <div className="Eye"><h1>BlackEye</h1></div>
+
                                     <Form.Control type="file" id="file" class="file" required name="file" onChange={uploadToIPFS} />
                                     <label for="file">  Select file for profile image</label> 
                                 </div>
-                                    <Form.Control onChange={(e) => setUsername(e.target.value)} required type="text" placeholder="Username"  id='user-name' />
+                                        <Form.Control onChange={(e) => setUsername(e.target.value)} required type="text" placeholder="Username"  id='user-name' />
                                         <Button onClick={mintProfile} id="mintt-button" >
                                                 Mint NFT Profile
                                         </Button>
@@ -164,7 +165,7 @@ const App = ({ contract }) => {
                                     <Modal show={show}  keepMounted onHide={handleClose} animation={false} id='box-modal' style={{marginTop: `100px`}} >
                                     <Modal.Header closeButton   className='modal-box'>                                                           
                                                 <Modal.Title > 
-                                                        <div class="state"><h1>MACpost</h1></div>
+                                                        <div class="state"><h1>BlackEye</h1></div>
                                                 </Modal.Title>
                                     </Modal.Header>
 
