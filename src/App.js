@@ -57,10 +57,12 @@ function App() {
 
               <Navbar.Brand href="http://">
 
-                <div className="div-logo">
-                  <img src={logo} width="40" height="40" className="logo" href="localhost:3000" />
-                  &nbsp; <a  id="macpost">MACpost</a>
-                </div>
+                <div id="div-logo">
+                        <Nav.Link as={Link} to="/" id="macpost"> 
+                            <img src={logo} width="40" height="40" className="logo" href="localhost:3000" />
+                            BlackEye
+                        </Nav.Link>
+                </div>      
 
               </Navbar.Brand>
 
@@ -68,8 +70,8 @@ function App() {
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="  navo" >
 
-                <Nav.Link as={Link} to="/" id="home"><HouseDoorFill  size={16} /></Nav.Link>
-                  <Nav.Link as={Link} to="/profile" id="profile"><PersonFill  size={16} /></Nav.Link>
+                <Nav.Link as={Link} to="/" id="home"><HouseDoorFill  size={23} /></Nav.Link>
+                  <Nav.Link as={Link} to="/profile" id="profile"><PersonFill  size={23} /></Nav.Link>
 
 
                 </Nav>
