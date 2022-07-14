@@ -81,17 +81,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #15F095;
+    color: #fff;
     transition: transform .2s ease-out;
     background-color: #0b0b0c;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     margin-left: 16%;
+    font-size: 21px;
   }
 
-  .formm #user-name #mintt-button:focus{
+  .formm #user-name:focus{
       border: none;
       outline: none;
+      box-shadow: none;
   }
+
+  .formm #mintt-button:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
  .formm #mintt-button{
   background-color: #15F095;
   border-radius: 5px;
@@ -101,6 +109,10 @@
   margin-left: 2%;
   font-size: 19px;
   min-width: 130px;
+  margin-bottom: 4%;
+ }
+ .Eye{
+   margin-top: 1% ;
  }
 
   #box-modal{
@@ -163,7 +175,9 @@
     background-color: #0b0b0c;
     margin-bottom: 10px;
     margin-left: 16%;
-    margin-top: 10%;
+    margin-top: 6%;
+    font-size: 20px;
+
   }
   .file-inputt label:focus {
 background-color: #15F095;
@@ -247,6 +261,7 @@ float: left;
     font-size: 20px;
     font-weight: 400;
     width: 80%;
+    margin-left: 12%;
 }
 
 #set-profile:focus{
